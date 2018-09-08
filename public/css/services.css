@@ -1,0 +1,96 @@
+.service-section {
+	width: 100%;
+  display: flex;
+	position: relative;
+  flex-direction: column;
+}
+.service-section:nth-child(2n) {
+  height: 120vh;
+}
+.service-section:nth-child(2n-1) {
+  height: 60vh;
+}
+.service-intro {
+  height: 15vh !important;
+}
+.slant:nth-child(2n-1)::after {
+	content: '';
+  z-index: 3;
+	width: 100%;
+	height: 32vh;
+	bottom: -15vh;
+  position: absolute;
+	transform: skewY(8deg);
+}
+.service-non-intro:nth-child(2n-1)::before {
+  content: '';
+	width: 100%;
+	height: 32vh;
+	top: -15vh;
+  position: absolute;
+	transform: skewY(8deg);
+}
+.service-non-intro:nth-child(2n)::before {
+  background: #fff;
+}
+.service-non-intro:nth-child(2n-1)::before {
+  background: #e4100d;
+}
+.services-block {
+  background: #e4100d;
+}
+.service-non-intro:nth-child(2n-1) {
+
+}
+.service-non-intro:nth-child(2n) {
+
+}
+.service-section:nth-child(2n-1) {
+	background: #e4100d;
+  align-items: flex-end;
+}
+.service-section:nth-child(2n) {
+
+  align-items: flex-start;
+}
+.slant:nth-child(2n-1)::after {
+	background: #e4100d;
+}
+.slant:nth-child(2n)::after {
+	background: transparent;
+}
+.service-section-header, .service-intro p{
+  z-index: 4;
+  font-size: 4em;
+  text-transform: capitalize;
+}
+.header-left {
+  padding-left: 2vw;
+}
+.header-right {
+  padding-right: 5vw;
+}
+.white-text {
+  color: #fff;
+}
+.tomato-text {
+  color: #e4100d;
+}
+.service-hospitality {
+  background: url("../images/personalcare.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.service-staff {
+  background: url("../images/staff.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.service-facilities {
+  background: url("../images/facilities.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

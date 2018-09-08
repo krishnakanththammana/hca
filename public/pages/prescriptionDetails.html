@@ -1,0 +1,42 @@
+<md-dialog aria-label="notification" class="notification-dialog"
+  ng-class="{'expanded-prescription-dialog': expanded}" ng-cloak>
+  <div class="notification-header">
+    <div class="prescription-dialog-image circle">
+
+    </div>
+    <div class="notification-text">
+      <span class="notification-subject">Prescription From: Dr. Bruce Banner</span>
+
+    </div>
+    <div class="close-notification">
+      <md-button class="md-icon-button close-btn" ng-click="close()">
+        <i class="fa fa-times"></i>
+      </md-button>
+      <md-button class="md-icon-button close-btn" ng-click="toggleWidth()">
+        <i class="fa fa-expand"></i>
+      </md-button>
+    </div>
+  </div>
+  <div class="medicine-details">
+    <div class="medicine-row row-header">
+      <span class="medicine-name medicine-header">Name</span>
+      <span class="medicine-dosage medicine-header">Dosage</span>
+      <span class="medicine-directions medicine-header" ng-class="{'display-none': !expanded}">Directions</span>
+      <span class="medicine-quantity medicine-header" ng-class="{'display-none': !expanded}">Quantity</span>
+      <span class="medicine-date medicine-header" ng-class="{'display-none': !expanded}">Date</span>
+      <span class="medicine-prescribed medicine-header" ng-class="{'display-none': !expanded}">Prescribed</span>
+      <span class="medicine-refill-btn medicine-header">Refill</span>
+    </div>
+    <div class="medicine-row row-items" ng-repeat="item in userDetails.record.prescriptions track by $index">
+      <span class="medicine-name">{{item.name}}</span>
+      <span class="medicine-dosage" >{{item.dosage}}</span>
+      <span class="medicine-directions " ng-class="{'display-none': !expanded}">{{item.directions}}</span>
+      <span class="medicine-quantity " ng-class="{'display-none': !expanded}">{{item.quantity}}</span>
+      <span class="medicine-date " ng-class="{'display-none': !expanded}">{{item.date}}</span>
+      <span class="medicine-prescribed " ng-class="{'display-none': !expanded}">{{item.prescribed}}</span>
+      <span class="medicine-refill-btn">
+        <md-button class="md-raised md-primary" ng-click="refillRequest()" ng-disabled="item.refill=='no'">Refill</md-button>
+      </span>
+    </div>
+  </div>
+</md-dialog>

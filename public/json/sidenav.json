@@ -1,0 +1,46 @@
+[{
+  "state":"main.overview",
+  "name":"Wellness Dashboard",
+  "url":"/overview",
+  "type": "dashboard"
+},{
+  "state":"main.community",
+  "name":"My Community",
+  "url":"/community",
+  "type": "menu item"
+},{
+  "state":"main.expense",
+  "name":"Expense Management",
+  "url":"/expense",
+  "type": "menu item"
+},{
+  "state":"main.map",
+  "name":"Building Map",
+  "url":"/map",
+  "type": "menu item"
+},{
+  "state":"main.services",
+  "name":"Services",
+  "url":"/services",
+  "type": "menu item"
+},{
+  "state":"main.symptoms",
+  "name":"Symptoms",
+  "url":"/symptoms",
+  "type": "menu item"
+},{
+  "state":"main.diet",
+  "name":"Diet",
+  "url":"/diet",
+  "type": "menu item"
+},{
+  "state":"main.prescription",
+  "name":"Prescription",
+  "url":"/prescription",
+  "type": "menu item"
+},{
+  "state":"initial",
+  "name":"Logout",
+  "url":"/",
+  "type": "logout"
+}]
